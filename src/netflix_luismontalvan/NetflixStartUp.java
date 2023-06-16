@@ -4,6 +4,8 @@
  */
 package netflix_luismontalvan;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author luxte
@@ -21,12 +23,9 @@ public class NetflixStartUp extends javax.swing.JFrame {
         jPuserScreen.setVisible(false);
 //       LoadingScreen ls = new LoadingScreen(jpbStartUp, true, true, jPstartUp);
         //Thread carga = new Thread(ls);
-        LoadingScreen ls = new LoadingScreen(jpbStartUp, true, true, jPstartUp, jPuserScreen);
+        LoadingScreen ls = new LoadingScreen(jpbStartUp, true, true, jPstartUp, jDCrearCuenta);
         ls.start();
-        User2.setVisible(false);
-        User3.setVisible(false);
-        User4.setVisible(false);
-        User6.setVisible(false);
+        
     }
 
     /**
@@ -38,21 +37,187 @@ public class NetflixStartUp extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDIniciarSesion = new javax.swing.JDialog();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jDCrearCuenta = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jtfCrearUser = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jpfCrearContra = new javax.swing.JPasswordField();
+        jButton2 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
         jPstartUp = new javax.swing.JPanel();
         jLNetflixInicio = new javax.swing.JLabel();
         jpbStartUp = new javax.swing.JProgressBar();
-        jLabel2 = new javax.swing.JLabel();
         jPuserScreen = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        User1 = new javax.swing.JButton();
-        jLUser1 = new javax.swing.JLabel();
-        User2 = new javax.swing.JButton();
-        User3 = new javax.swing.JButton();
-        User4 = new javax.swing.JButton();
-        User5 = new javax.swing.JButton();
-        User6 = new javax.swing.JButton();
         jPNetflixHome = new javax.swing.JPanel();
+
+        jDIniciarSesion.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setText("Iniciar Sesion");
+
+        jLabel3.setText("Usuario");
+
+        jLabel4.setText("Contraseña");
+
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
+        jButton1.setText("Iniciar Sesion");
+
+        jLabel5.setText("¿No tiene una cuenta? Cree una cuenta");
+
+        jLabel6.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel6.setText("aqui");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel4)
+                                .addComponent(jLabel3))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(19, 19, 19)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel1)))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(jPasswordField1)))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addContainerGap(62, Short.MAX_VALUE))
+        );
+
+        jDIniciarSesion.getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 280, 260));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\luism\\Desktop\\Programción\\ProyectoNetflix\\zgeTuV.jpg")); // NOI18N
+        jLabel2.setText("jLabel2");
+        jDIniciarSesion.getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, -1));
+
+        jDCrearCuenta.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel7.setText("Crear Cuenta");
+
+        jLabel8.setText("Usuario");
+
+        jLabel9.setText("Contraseña");
+
+        jpfCrearContra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jpfCrearContraActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(204, 0, 0));
+        jButton2.setText("Crear Usuario");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtfCrearUser, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jpfCrearContra)))))
+                .addContainerGap(25, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(30, 30, 30)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jtfCrearUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jpfCrearContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
+        jDCrearCuenta.getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, 280, 260));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\luism\\Desktop\\Programción\\ProyectoNetflix\\zgeTuV.jpg")); // NOI18N
+        jLabel12.setText("jLabel2");
+        jDCrearCuenta.getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, -1));
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Netflix");
@@ -66,46 +231,11 @@ public class NetflixStartUp extends javax.swing.JFrame {
         jPstartUp.add(jLNetflixInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 350, 640, 220));
         jPstartUp.add(jpbStartUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 60, -1, -1));
 
-        jLabel2.setText("jLabel2");
-        jPstartUp.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15670, 16570, -1, -1));
-
         jPuserScreen.setBackground(new java.awt.Color(0, 0, 0));
         jPuserScreen.setMaximumSize(new java.awt.Dimension(2147483647, 2147483647));
         jPuserScreen.setMinimumSize(new java.awt.Dimension(1230, 580));
         jPuserScreen.setPreferredSize(new java.awt.Dimension(15704, 16585));
         jPuserScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setText("Whos Watching");
-        jPuserScreen.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(32767, 32767, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Who's Watching? ");
-        jPuserScreen.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 290, 210, -1));
-
-        User1.setBackground(new java.awt.Color(0, 0, 0));
-        User1.setIcon(new javax.swing.ImageIcon("C:\\Users\\luxte\\Documents\\Netflix\\pngwing.com.png")); // NOI18N
-        jPuserScreen.add(User1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 380, 200, 190));
-
-        jLUser1.setFont(new java.awt.Font("Consolas", 1, 18)); // NOI18N
-        jLUser1.setForeground(new java.awt.Color(204, 204, 204));
-        jLUser1.setText("Yo");
-        jPuserScreen.add(jLUser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 580, -1, -1));
-
-        User2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/netflix_luismontalvan/2.png"))); // NOI18N
-        jPuserScreen.add(User2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 200, 190));
-
-        User3.setIcon(new javax.swing.ImageIcon("C:\\Users\\luxte\\Documents\\Netflix\\3.png")); // NOI18N
-        jPuserScreen.add(User3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 80, 200, 190));
-
-        User4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/netflix_luismontalvan/5.png"))); // NOI18N
-        jPuserScreen.add(User4, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 380, 200, 190));
-
-        User5.setIcon(new javax.swing.ImageIcon("C:\\Users\\luxte\\Documents\\Netflix\\1.png")); // NOI18N
-        jPuserScreen.add(User5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 380, 200, 190));
-
-        User6.setIcon(new javax.swing.ImageIcon("C:\\Users\\luxte\\Documents\\Netflix\\4.png")); // NOI18N
-        jPuserScreen.add(User6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 200, 190));
 
         javax.swing.GroupLayout jPNetflixHomeLayout = new javax.swing.GroupLayout(jPNetflixHome);
         jPNetflixHome.setLayout(jPNetflixHomeLayout);
@@ -152,6 +282,23 @@ public class NetflixStartUp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jpfCrearContraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpfCrearContraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jpfCrearContraActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+       usuarios.add(new Usuario(jtfCrearUser.getText(), jpfCrearContra.getText()));
+       jDCrearCuenta.setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -189,21 +336,32 @@ public class NetflixStartUp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton User1;
-    private javax.swing.JButton User2;
-    private javax.swing.JButton User3;
-    private javax.swing.JButton User4;
-    private javax.swing.JButton User5;
-    private javax.swing.JButton User6;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JDialog jDCrearCuenta;
+    private javax.swing.JDialog jDIniciarSesion;
     private javax.swing.JLabel jLNetflixInicio;
-    private javax.swing.JLabel jLUser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPNetflixHome;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPanel jPstartUp;
     private javax.swing.JPanel jPuserScreen;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JProgressBar jpbStartUp;
+    private javax.swing.JPasswordField jpfCrearContra;
+    private javax.swing.JTextField jtfCrearUser;
     // End of variables declaration//GEN-END:variables
     LoadingScreen ls;
+    ArrayList<Usuario> usuarios = new ArrayList();
 }

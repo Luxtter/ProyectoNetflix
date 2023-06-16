@@ -6,6 +6,7 @@ package netflix_luismontalvan;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 
@@ -16,13 +17,14 @@ import javax.swing.JProgressBar;
 public class LoadingScreen extends Thread{
     private JProgressBar barra;
     private boolean avanzar, continuar;
-    private JPanel load, toload;
+    private JPanel load; 
+    private JDialog toload;
 
     public LoadingScreen(JProgressBar barra) {
         this.barra = barra;
     }
 
-    public LoadingScreen(JProgressBar barra, boolean avanzar, boolean continuar, JPanel load, JPanel toload) {
+    public LoadingScreen(JProgressBar barra, boolean avanzar, boolean continuar, JPanel load, JDialog toload) {
         this.barra = barra;
         this.avanzar = avanzar;
         this.continuar = continuar;
@@ -90,6 +92,7 @@ public class LoadingScreen extends Thread{
                     continuar=false;
                     load.setVisible(false);
                     toload.setVisible(true);
+                    
                 }
             }
             try {
